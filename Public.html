@@ -1,0 +1,11 @@
+<div>
+<ul>
+ <li ng-repeat="user in filterPublic(users)" >
+     <span>{{user.name}}</span>
+     <ul>
+        <li ng-repeat="item in user.todos">{{item.title}}</li>
+     </ul>
+ </li>
+</ul>
+<a href="#/mytodos">Back To Your List</a>
+</div>

@@ -1,0 +1,21 @@
+ <div>
+    <span ng-model="username">{{username}}</span>
+    <form name="frm" ng-submit="addToDo()">
+        <input type="text" name="newToDo" ng-model="newToDo" required />
+        <button ng-disabled=frm.$invalid>Add</button>
+    </form>
+
+    <ul>
+        <li ng-repeat="todo in todos" >
+        <input type="checkbox" ng-model="todo.done" />
+        {{todo.title}}
+        </li>
+    </ul>
+    <button ng-click="clearFinished()">Clear Completed</button>
+    <input type="checkbox" ng-model="isPublic"> Public </input>
+    <button ng-click="saveList()" ng-disabled="disableSave" >Save List</button>
+    </br>
+    <a href="#/publictodos">View Public Todos</a>
+    <a href="#/">Logout</a>
+
+</div>
